@@ -17,27 +17,7 @@ import "../styles/global.css";
   </body>
 </html>
 
-<script>
-  import AOS from "aos";
-  import "aos/dist/aos.css";
 
-  function initAos() {
-    AOS.init({
-      duration: 600,
-      once: true,
-      offset: 80,
-      easing: "ease-out-cubic",
-    });
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initAos, { once: true });
-  } else {
-    initAos();
-  }
-
-  window.addEventListener("load", () => AOS.refreshHard());
-  window.addEventListener("resize", () => AOS.refresh());
 </script>
 
 <style>

@@ -299,11 +299,11 @@ export default function BentoGrid({ screen }: BentoGridProps) {
       {/* Screen header */}
       <div className="mb-3 shrink-0 md:mb-4">
         {screen.screenType && (
-          <p className="text-md sm:text-lg uppercase tracking-widest text-muted-foreground" data-aos="fade-up-sm">{screen.screenType}</p>
+          <p className="text-md sm:text-lg uppercase tracking-widest text-muted-foreground">{screen.screenType}</p>
         )}
-        <h1 className="text-8xl sm:text-9xl font-bold md:text-9xl tracking-tighter leading-none" data-aos="fade-up-sm" data-aos-delay="200">{screen.title}</h1>
+        <h1 className="text-8xl sm:text-9xl font-bold md:text-9xl tracking-tighter leading-none">{screen.title}</h1>
         {screen.subtitle && (
-          <p className="mt-4 text-md sm:text-lg text-muted-foreground" data-aos="fade-up-sm" data-aos-delay="300">{screen.subtitle}</p>
+          <p className="mt-4 text-md sm:text-lg text-muted-foreground" >{screen.subtitle}</p>
         )}
       </div>
 
@@ -315,9 +315,6 @@ export default function BentoGrid({ screen }: BentoGridProps) {
             <article
               key={item._key}
               className={`w-full shrink-0 overflow-hidden rounded-2xl bg-card md:min-h-0 text-black ${getCardLayoutClass(item)}`}
-              data-aos={getCardAos(variant)}
-              data-aos-delay={String(Math.min(index * 45, 360))}
-              data-aos-duration="600"
             >
               <CardContent item={item} />
             </article>
