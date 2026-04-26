@@ -33,6 +33,27 @@ function getCardLayoutClass(item: BentoCard) {
   return "md:col-span-2 md:row-span-1";
 }
 
+function getCardAos(variant?: BentoCardVariant) {
+  switch (variant ?? "default") {
+    case "hero":
+      return "fade-up-sm";
+    case "social":
+      return "zoom-in-sm";
+    case "stat":
+      return "fade-up-right-sm";
+    case "spotify":
+      return "fade-left-sm";
+    case "photo":
+      return "zoom-out-sm";
+    case "post":
+      return "fade-up-left-sm";
+    case "cta":
+      return "fade-down-left-sm";
+    default:
+      return "fade-up-sm";
+  }
+}
+
 // ─── Social icon SVGs ─────────────────────────────────────────────────────────
 function SocialIcon({ icon }: { icon?: BentoCard["icon"] }) {
   const cls = "w-6 h-6";
@@ -278,21 +299,25 @@ export default function BentoGrid({ screen }: BentoGridProps) {
       {/* Screen header */}
       <div className="mb-3 shrink-0 md:mb-4">
         {screen.screenType && (
-          <p className="text-md sm:text-lg uppercase tracking-widest text-muted-foreground">{screen.screenType}</p>
+          <p className="text-md sm:text-lg uppercase tracking-widest text-muted-foreground" data-aos="fade-up-sm">{screen.screenType}</p>
         )}
-        <h1 className="text-8xl sm:text-9xl font-bold md:text-9xl tracking-tighter leading-none">{screen.title}</h1>
+        <h1 className="text-8xl sm:text-9xl font-bold md:text-9xl tracking-tighter leading-none" data-aos="fade-up-sm" data-aos-delay="200">{screen.title}</h1>
         {screen.subtitle && (
-          <p className="mt-4 text-md sm:text-lg text-muted-foreground">{screen.subtitle}</p>
+          <p className="mt-4 text-md sm:text-lg text-muted-foreground" data-aos="fade-up-sm" data-aos-delay="300">{screen.subtitle}</p>
         )}
       </div>
 
       {/* Bento grid */}
       <div className="no-scrollbar flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto overscroll-contain md:grid md:grid-flow-dense md:grid-cols-4 md:auto-rows-[minmax(140px,1fr)] md:gap-4">
-        {items.map((item) => {
+        {items.map((item, index) => {
+          const variant = item.variant ?? "default";
           return (
             <article
               key={item._key}
               className={`w-full shrink-0 overflow-hidden rounded-2xl bg-card md:min-h-0 text-black ${getCardLayoutClass(item)}`}
+              data-aos={getCardAos(variant)}
+              data-aos-delay={String(Math.min(index * 45, 360))}
+              data-aos-duration="600"
             >
               <CardContent item={item} />
             </article>

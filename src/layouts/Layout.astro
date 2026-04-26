@@ -17,6 +17,29 @@ import "../styles/global.css";
   </body>
 </html>
 
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+
+  function initAos() {
+    AOS.init({
+      duration: 600,
+      once: true,
+      offset: 80,
+      easing: "ease-out-cubic",
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAos, { once: true });
+  } else {
+    initAos();
+  }
+
+  window.addEventListener("load", () => AOS.refreshHard());
+  window.addEventListener("resize", () => AOS.refresh());
+</script>
+
 <style>
   html,
   body {
@@ -24,6 +47,6 @@ import "../styles/global.css";
     width: 100%;
     height: 100%;
     background-color: #212121;
-    color: #D7D0D8
+    color: #d7d0d8;
   }
 </style>
