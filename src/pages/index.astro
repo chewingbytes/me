@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import CarouselMain from "@/components/CarouselMain";
+import { frontmatterToScreen, type ScreenFrontmatter } from "@/lib/content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const order = ["homepage", "projects", "photography", "blog"];
+
+const mdFiles = import.meta.glob<{ frontmatter: ScreenFrontmatter }>(
+  "../content/*.md",
+  { eager: true }
+);
+
+const screens = Object.values(mdFiles)
+  .map((f) => frontmatterToScreen(f.frontmatter))
+  .sort((a, b) => order.indexOf(a._key) - order.indexOf(b._key));
 ---
 
 <Layout>
-	<Welcome />
+  <div class="h-svh w-full overflow-hidden">
+    <CarouselMain client:load screens={screens} />
+  </div>
 </Layout>
