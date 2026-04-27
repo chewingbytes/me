@@ -8,59 +8,55 @@ density: normal
 cards:
   - key: proj-intro
     variant: text
-    size: md
+    size: lg
     title: "What I Build"
     eyebrow: "Overview"
-    body: "From design tools to SaaS dashboards — I work across the stack, always with a focus on experience and performance."
+    body: "I previously interned at Zing Experiential Studio, building immersive interactive experiences for physical and virtual environments. Notable mention was the Alibaba X Ilight Cloud City Installation at Ilight Singapore 2025 where I gained hands-on experience collaborating with a dev team."
 
   - key: proj-1
     variant: project
-    size: lg
-    title: "Personal Platform"
-    eyebrow: "2024 · Astro + React"
-    body: "The very site you're on. Built with Astro, React, TailwindCSS, and a CMS-driven bento grid carousel. Open source."
-    image: "https://picsum.photos/seed/proj1/800/500"
-    tags: ["Astro", "React", "TailwindCSS"]
-    ctaLabel: "View source →"
-    ctaHref: "https://github.com"
+    size: xl
+    title: "Application Developer Lead"
+    eyebrow: "Feb 2026"
+    body: "Engineered an automated QR-attendance system and mobile app for Kumon Centers. Replaced manual tracking with an interactive dashboard and integrated the Meta WhatsApp Business API to automate parent notifications."
+    image: "/kumon.jpg"
+    tags:
+      [
+        "Whatsapp Business API",
+        "Expo React Native",
+        "NextJS",
+        "NodeJS",
+        "Linux",
+        "TypeScript",
+        "Server Management",
+        "Ubuntu",
+        "React",
+        "TailwindCSS",
+        "SMTP2GO",
+      ]
+    ctaLabel: "View more →"
+    ctaHref: "https://www.linkedin.com/in/bryan-chew-195ba4286/"
 
   - key: proj-2
     variant: project
-    size: md
-    title: "Design System Kit"
-    eyebrow: "2024 · Figma + React"
-    body: "A production-ready design system with 60+ components, token management, and Figma auto-sync."
-    image: "https://picsum.photos/seed/proj2/800/500"
-    tags: ["Figma", "React", "Tokens"]
-    ctaLabel: "Case study →"
-    ctaHref: "#"
+    size: xl
+    title: "Alibaba Cloud City Installation @ Ilight Singapore 2025"
+    eyebrow: "June 2025"
+    body: "Led frontend web development for the Alibaba Cloud City installation showcased at I Light Singapore 2025, delivering immersive and real-time interactive web visuals for I Light visitors. Coordinated with designers and backend engineers for proper design and seamless API connection with Alibaba’s AI image and video generation pipeline."
+    image: "/ilight.jpg"
+    tags: ["Figma", "NextJS", "React", "TailwindCSS"]
+    ctaLabel: "View More →"
+    ctaHref: "https://www.linkedin.com/in/bryan-chew-195ba4286/"
 
   - key: proj-3
     variant: project
-    size: sm
-    title: "Habit Tracker"
-    eyebrow: "2023 · Next.js"
-    body: "Minimal daily habit tracker with streaks, insights, and a calm UI. Built solo in a weekend."
-    image: "https://picsum.photos/seed/proj3/800/500"
-    tags: ["Next.js", "Prisma"]
-    ctaLabel: "Live demo →"
-    ctaHref: "#"
+    size: lg
+    title: "Hangout!"
+    eyebrow: "Current"
+    body: "Currently building Hangout! to provide students in Singapore a safe and secure way to find communities and events via personality and interest-matching."
+    image: "/hangout.png"
+    ctaLabel: "Hangout! →"
+    ctaHref: "https://www.hangoutstudios.com"
 
-  - key: proj-4
-    variant: project
-    size: sm
-    title: "CLI Tooling"
-    eyebrow: "2023 · Node.js"
-    body: "A CLI scaffolding tool for spinning up opinionated project templates in seconds."
-    image: "https://picsum.photos/seed/proj4/800/500"
-    tags: ["Node.js", "CLI"]
-    ctaLabel: "npm →"
-    ctaHref: "#"
 
-  - key: stack
-    variant: tags
-    size: md
-    title: "Tech Stack"
-    eyebrow: "Tools I reach for"
-    tags: ["TypeScript", "React", "Astro", "Next.js", "TailwindCSS", "Figma", "PostgreSQL", "Prisma", "Sanity"]
 ---

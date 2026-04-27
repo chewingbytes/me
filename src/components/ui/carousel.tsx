@@ -2,6 +2,7 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -50,12 +51,23 @@ function Carousel({
   children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
+  const resolvedPlugins = React.useMemo(() => {
+    const basePlugins = plugins ?? []
+
+    return [
+      ...basePlugins,
+      WheelGesturesPlugin({
+        forceWheelAxis: orientation === "horizontal" ? "x" : "y",
+      }),
+    ]
+  }, [orientation, plugins])
+
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
       axis: orientation === "horizontal" ? "x" : "y",
     },
-    plugins
+    resolvedPlugins
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)

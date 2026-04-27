@@ -1,7 +1,7 @@
 ---
 screenKey: homepage
 title: "Bryan Chew"
-subtitle: "Entrepreneur & Developer"
+subtitle: "Developer and Entrepreneur"
 screenType: homepage
 layoutPreset: feature
 density: normal
@@ -9,43 +9,50 @@ cards:
   - key: hero
     variant: hero
     size: xl
-    title: "Hey, I'm Bryan 👋"
+    title: "hey, i'm bryan 👋"
     eyebrow: "About me"
-    body: "I build things that live on the internet — from design systems to interactive portfolios. I care deeply about the craft of making software feel good."
+    body: "I'm a software developer and entrepreneur. I like spending my time working on passion projects that give back to the community. I'm currently working on a solution to improve students' mental wellbeing by fostering social connection in a safer and engaging manner."
+
+  - key: location
+    variant: location
+    size: xs
+    title: "Based in"
+    eyebrow: "Location"
+    stat: "🆂🅸🅽🅶🅰🅿🅾🆁🅴"
+    body: "Open to remote collaborations worldwide."
 
   - key: role
     variant: stat
     size: xs
     title: "Current Role"
     eyebrow: "Where I am"
-    stat: "Full-stack Designer"
-    body: "Bridging design and engineering to ship polished products."
-
-  - key: location
-    variant: stat
-    size: xs
-    title: "Based in"
-    eyebrow: "Location"
-    stat: "🇲🇾 Kuala Lumpur"
-    body: "Open to remote collaborations worldwide."
+    stat: "Student"
+    body: "Actively looking for an internship in Software Development and Design."
 
   - key: spotify
     variant: spotify
     size: md
     title: "Currently Listening"
-    eyebrow: "Spotify"
-    track: "BIRDS OF A FEATHER"
-    artist: "Billie Eilish"
-    albumArt: "https://picsum.photos/seed/album1/200/200"
-    spotifyUrl: "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
+    eyebrow: "Avid House Listener"
+    topSong:
+      title: "Deep Diving"
+      artist: "Fred Again"
+      album: "Actual Life 1"
+      cover: "/fred_cover.jpg"
+    topArtists:
+      - "Fred Again"
+      - "Salute"
+      - "John Summit"
+      - "Chis Stussy"
+      - "Gracie Abrams"
 
   - key: github
     variant: social
     size: xs
     title: "GitHub"
     eyebrow: "Code"
-    handle: "@bryanchew"
-    href: "https://github.com"
+    handle: "@chewingbytes"
+    href: "https://github.com/chewingbytes?tab=repositories"
     icon: github
 
   - key: linkedin
@@ -54,7 +61,7 @@ cards:
     title: "LinkedIn"
     eyebrow: "Work"
     handle: "Bryan Chew"
-    href: "https://linkedin.com"
+    href: "https://www.linkedin.com/in/bryan-chew-195ba4286/"
     icon: linkedin
 
   - key: contact
@@ -62,7 +69,7 @@ cards:
     size: md
     title: "Let's work together"
     eyebrow: "Open to work"
-    body: "I'm available for freelance projects, full-time roles, and interesting collaborations. Drop me a message."
+    body: "I'm available for freelance projects, internships, full-time roles, and interesting collaborations. Drop me a message."
     ctaLabel: "Get in touch →"
     ctaHref: "mailto:hello@bryan.dev"
 ---

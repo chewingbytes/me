@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
+    "@astrojs/vercel": "^10.0.5",
     "@base-ui/react": "^1.4.1",
     "@fontsource-variable/figtree": "^5.2.10",
     "@hugeicons/core-free-icons": "^4.1.1",
@@ -25,6 +26,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
+    "embla-carousel-wheel-gestures": "^8.1.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-is": "^19.2.5",

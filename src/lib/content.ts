@@ -18,6 +18,7 @@ export type BentoCardVariant =
   | "stat"
   | "social"
   | "spotify"
+  | "location"
   | "project"
   | "photo"
   | "post"
@@ -40,10 +41,13 @@ export type BentoCard = {
   href?: string;
   icon?: "github" | "twitter" | "linkedin" | "instagram";
   // spotify
-  track?: string;
-  artist?: string;
-  albumArt?: string;
-  spotifyUrl?: string;
+  topSong?: {
+    title: string;
+    artist: string;
+    album?: string;
+    cover?: string;
+  };
+  topArtists?: string[];
   // stat
   stat?: string;
   // tags
