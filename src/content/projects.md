@@ -11,7 +11,7 @@ cards:
     size: lg
     title: "What I Build"
     eyebrow: "Overview"
-    body: "I previously interned at Zing Experiential Studio, building immersive interactive experiences for physical and virtual environments. Notable mention was the Alibaba X Ilight Cloud City Installation at Ilight Singapore 2025 where I gained hands-on experience collaborating with a dev team."
+    body: "I previously interned at Zing Experiential Studio, building immersive interactive experiences for physical and virtual events. Notable mention was the Alibaba X Ilight Cloud City Installation at Ilight Singapore 2025 where I gained hands-on experience collaborating with a dev team to finish the project."
 
   - key: proj-1
     variant: project
