@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Layout from "@/layouts/Layout.astro";
+
+const title = "Thailand";
+
+const photoModules = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/photos/thailand/*.{jpg,jpeg,png,webp,avif}",
+  { eager: true },
+);
+
+const photos = Object.values(photoModules)
+  .map((mod) => mod.default)
+  .sort((a, b) => a.src.localeCompare(b.src, undefined, { numeric: true }));
+---
+
+<Layout>
+  <main
+    class="mx-auto flex h-svh w-full max-w-7xl flex-col overflow-y-auto px-4 py-6 md:px-8 md:py-10"
+  >
+    <a
+      href="/?screen=photography"
+      class="inline-flex w-fit items-center gap-2 rounded-full bg-card px-4 py-2 text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:bg-muted"
+    >
+      ← Back to carousel
+    </a>
+
+    <header class="mt-6 flex flex-col gap-2">
+      <p
+        class="text-md sm:text-lg uppercase tracking-widest text-muted-foreground"
+      >
+        Photography
+      </p>
+      <h1
+        class="text-8xl sm:text-9xl font-thin md:text-9xl tracking-tighter leading-none"
+      >
+        {title}
+      </h1>
+      <p class="text-sm text-muted-foreground">{photos.length} photos</p>
+    </header>
+
+    <section class="mt-8 columns-1 gap-4 sm:columns-2 lg:columns-3">
+      {
+        photos.map((photo, index) => (
+          <figure class="mb-4 break-inside-avoid overflow-hidden rounded-2xl bg-card">
+            <Image
+              src={photo}
+              alt={`${title} photo ${index + 1}`}
+              class="h-auto w-full object-cover"
+              widths={[480, 768, 1024]}
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              loading={index < 3 ? "eager" : "lazy"}
+            />
+          </figure>
+        ))
+      }
+    </section>
+  </main>
+</Layout>

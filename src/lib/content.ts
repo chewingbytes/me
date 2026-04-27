@@ -24,6 +24,7 @@ export type BentoCardVariant =
   | "post"
   | "tags"
   | "cta"
+  | "photogear"
   | "default";
 
 // ─── Bento Card ───────────────────────────────────────────────────────────────

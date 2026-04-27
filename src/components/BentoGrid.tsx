@@ -29,6 +29,7 @@ const variantLayoutClass: Partial<Record<BentoCardVariant, string>> = {
   hero: "md:col-span-3 md:row-span-1",
   social: "md:col-span-1 md:row-span-1",
   stat: "md:col-span-1 md:row-span-1",
+  photogear: "md:col-span-1 md:row-span-1",
   location: "md:col-span-2 md:row-span-1",
 };
 
@@ -121,6 +122,16 @@ function StatCard({ item }: { item: BentoCard }) {
           {item.body}
         </p>
       )}
+    </div>
+  );
+}
+
+function PhotoGearCard({ item }: { item: BentoCard }) {
+  return (
+    <div className="flex justify-center items-center p-4 md:h-full md:p-5">
+      <p className="text-lg text-center font-thin text-foreground md:text-xl lg:text-2xl">
+        {item.stat}
+      </p>
     </div>
   );
 }
@@ -277,8 +288,8 @@ function ProjectCard({ item }: { item: BentoCard }) {
 }
 
 function PhotoCard({ item }: { item: BentoCard }) {
-  return (
-    <div className="relative min-h-56 overflow-hidden md:h-full">
+  const content = (
+    <>
       {item.image && (
         <img
           src={item.image}
@@ -296,7 +307,22 @@ function PhotoCard({ item }: { item: BentoCard }) {
         <p className="mt-0.5 font-semibold leading-snug">{item.title}</p>
         {item.body && <p className="mt-1 text-xs text-white/60">{item.body}</p>}
       </div>
-    </div>
+    </>
+  );
+
+  if (!item.href) {
+    return <div className="relative min-h-56 overflow-hidden md:h-full">{content}</div>;
+  }
+
+  console.log("ITEM.href:", item.href);
+
+  return (
+    <a
+      href={item.href}
+      className="group relative block min-h-56 overflow-hidden md:h-full"
+    >
+      {content}
+    </a>
   );
 }
 
@@ -439,6 +465,7 @@ function CardContent({ item }: { item: BentoCard }) {
   const v: BentoCardVariant = item.variant ?? "default";
   if (v === "hero") return <HeroCard item={item} />;
   if (v === "stat" || v === "location") return <StatCard item={item} />;
+  if (v === "photogear") return <PhotoGearCard item={item} />;
   if (v === "social") return <SocialCard item={item} />;
   if (v === "spotify") return <SpotifyCard item={item} />;
   if (v === "project") return <ProjectCard item={item} />;

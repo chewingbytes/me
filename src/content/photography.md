@@ -1,63 +1,56 @@
 ---
 screenKey: photography
-title: "Photography"
+title: "Photos"
 subtitle: "Moments I've caught"
 screenType: photography
 layoutPreset: editorial
 density: spacious
 cards:
   - key: photo-intro
-    variant: text
-    size: md
-    title: "Through the Lens"
+    variant: hero
+    size: xl
+    title: "The World In My Lens"
     eyebrow: "Photography"
-    body: "Street, architecture, and the occasional portrait. Shot on a Sony A7C and a beat-up 35mm film camera."
-
-  - key: photo-1
-    variant: photo
-    size: lg
-    title: "Petaling Street at Dusk"
-    eyebrow: "Street · Kuala Lumpur"
-    image: "https://picsum.photos/seed/kl1/900/600"
-    body: "The golden hour hits different in old town. Long exposure, natural chaos."
-
-  - key: photo-2
-    variant: photo
-    size: sm
-    title: "KLCC Puddle Reflection"
-    eyebrow: "Architecture · KL"
-    image: "https://picsum.photos/seed/kl2/600/800"
-    body: "A rainy night turned the plaza into a mirror."
-
-  - key: photo-3
-    variant: photo
-    size: sm
-    title: "Hawker Stall Heat"
-    eyebrow: "Street · Penang"
-    image: "https://picsum.photos/seed/penang1/600/800"
-    body: "Wok hei and smoke — Penang's hawker culture in one frame."
-
-  - key: photo-4
-    variant: photo
-    size: md
-    title: "Batu Caves Steps"
-    eyebrow: "Architecture · Selangor"
-    image: "https://picsum.photos/seed/batu1/900/600"
-    body: "272 steps. The rainbow staircase earns its hype at sunrise."
-
-  - key: photo-5
-    variant: photo
-    size: xs
-    title: "Monsoon Cloud"
-    eyebrow: "Nature"
-    image: "https://picsum.photos/seed/cloud1/600/600"
-    body: "Captured right before the downpour."
+    body: "Choose a collection and explore."
 
   - key: photo-gear
-    variant: stat
-    size: xs
-    title: "Gear"
-    eyebrow: "Shooting with"
-    stat: "Sony A7C"
-    body: "35mm f/1.8 · 85mm f/1.8 · Kodak Portra 400"
+    variant: photogear
+    size: xl
+    stat: "CANON 600D & Canon EF-S 55-250mm"
+
+  - key: photo-china
+    variant: photo
+    size: lg
+    title: "China"
+    eyebrow: "Collection"
+    image: "/src/assets/photos/china/_MG_4069-Enhanced-NR.jpg"
+    body: "My trip to Yunnan, China."
+    href: "/photography/china"
+
+  - key: photo-japan
+    variant: photo
+    size: lg
+    title: "Japan"
+    eyebrow: "Collection"
+    image: "/src/assets/photos/japan/_MG_5007.jpg"
+    body: "Beautiful Hokkaido and Osaka."
+    href: "/photography/japan"
+
+  - key: photo-mundai
+    variant: photo
+    size: lg
+    title: "Singapore Mundai Zoo"
+    eyebrow: "Collection"
+    image: "/src/assets/photos/mundai/monkei3.jpg"
+    body: "Wildlife moments and nature close-ups."
+    href: "/photography/mundai"
+
+  - key: photo-thailand
+    variant: photo
+    size: md
+    title: "Thailand"
+    eyebrow: "Collection"
+    image: "/src/assets/photos/thailand/_MG_2751.jpg"
+    body: "School Trip to Bangkok, Thailand."
+    href: "/photography/thailand"
 ---

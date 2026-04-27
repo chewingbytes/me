@@ -1,0 +1,156 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="mx-auto min-h-svh w-full max-w-5xl px-4 py-8 text-foreground md:px-8 md:py-12">
+    <div class="rounded-3xl border border-border/70 bg-card p-5 shadow-sm md:p-8">
+      <header class="flex flex-col gap-4 border-b border-border pb-6 md:flex-row md:items-start md:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-foreground/80">Curriculum Vitae</p>
+          <h1 class="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Bryan Chew</h1>
+          <p class="mt-2 max-w-2xl text-sm leading-relaxed text-foreground/80">
+            Motivated IT student at Temasek Polytechnic with hands-on experience in full-stack development,
+            DevOps, and AI. Keen to learn and contribute as a Software Developer Intern on innovative,
+            real-world projects.
+          </p>
+        </div>
+
+        <div class="space-y-1 text-sm">
+          <p>
+            <span class="font-medium">Phone:</span>
+            <a class="text-primary hover:underline" href="tel:+6598190072">+65 9819 0072</a>
+          </p>
+          <p>
+            <span class="font-medium">Email:</span>
+            <a class="text-primary hover:underline" href="mailto:bryanchewzy24@gmail.com">bryanchewzy24@gmail.com</a>
+          </p>
+          <p>
+            <span class="font-medium">LinkedIn:</span>
+            <a class="text-primary hover:underline" href="https://linkedin.com/in/bryan-chew-195ba4286" target="_blank" rel="noreferrer">
+              linkedin.com/in/bryan-chew-195ba4286
+            </a>
+          </p>
+        </div>
+      </header>
+
+      <section class="mt-8 grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+        <div class="space-y-8">
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Education</h2>
+            <div class="mt-3 space-y-4">
+              <article class="rounded-2xl border border-border/70 bg-background p-4">
+                <div class="flex flex-col justify-between gap-1 md:flex-row md:items-center">
+                  <h3 class="font-semibold">Temasek Polytechnic — Diploma in Information Technology</h3>
+                  <p class="text-xs text-foreground/80">Apr 2023 – May 2027</p>
+                </div>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+                  <li>Relevant coursework: Full Stack Web Development, Machine Learning, Application Security, DevOps Automation, Data Structures &amp; Algorithms, Cloud Application Development.</li>
+                  <li>Key projects: Built multiple full-stack applications and AI-driven automation tools.</li>
+                </ul>
+              </article>
+
+              <article class="rounded-2xl border border-border/70 bg-background p-4">
+                <div class="flex flex-col justify-between gap-1 md:flex-row md:items-center">
+                  <h3 class="font-semibold">Serangoon Garden Secondary School — GCE ‘O’ Level</h3>
+                  <p class="text-xs text-foreground/80">2019 – 2023</p>
+                </div>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+                  <li>Achieved an L1R4 aggregate of 6 points.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Professional Experience</h2>
+            <div class="mt-3 space-y-4">
+              <article class="rounded-2xl border border-border/70 bg-background p-4">
+                <div class="flex flex-col justify-between gap-1 md:flex-row md:items-center">
+                  <h3 class="text-foreground font-semibold">Application Developer Lead — Kumon Punggol Plaza</h3>
+                </div>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+                  <li>Led development of a cross-platform automated attendance system, replacing manual paper logs with QR-code entry.</li>
+                  <li>Integrated Meta WhatsApp Business API to automate parent notifications, removing manual calls and improving communication speed.</li>
+                  <li>Built daily automated Excel reporting for student class data sent directly to instructors by email.</li>
+                  <li>Developed dashboard for downloadable records and student statistics.</li>
+                </ul>
+              </article>
+
+              <article class="rounded-2xl border border-border/70 bg-background p-4">
+                <div class="flex flex-col justify-between gap-1 md:flex-row md:items-center">
+                  <h3 class="font-semibold">Junior Multimedia Experiential Developer — Zing Experiential Studio</h3>
+                </div>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+                  <li>Led frontend development for “Alibaba X I Light Singapore 2025” Cloud City by translating Figma designs into production web interfaces.</li>
+                  <li>Collaborated with backend engineers to integrate Alibaba AI image/video generation pipeline for real-time interaction.</li>
+                  <li>Designed and tested interactive features for Singapore60 Heart &amp; Soul Experience at Orchard Central Library.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Technical Projects</h2>
+            <article class="mt-3 rounded-2xl border border-border/70 bg-background p-4">
+              <h3 class="font-semibold">AI Multimodal Telegram Bot</h3>
+              <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+                <li>Developed AI-driven Telegram bot using GPT-4o-mini with multi-API function calling.</li>
+                <li>Processed image, video, and voice inputs, generated images, fetched live data with Google Search API, and managed notes/reminders.</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <aside class="space-y-8">
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Technical Skills</h2>
+            <div class="mt-3 space-y-3 text-sm">
+              <div class="rounded-2xl border border-border/70 bg-background p-4">
+                <p class="font-medium">Frontend</p>
+                <p class="mt-1 text-foreground/80">React.js, Next.js, SvelteKit, Astro, React Native (Expo), Tailwind CSS, TypeScript, Figma, Electron.js</p>
+              </div>
+              <div class="rounded-2xl border border-border/70 bg-background p-4">
+                <p class="font-medium">Backend &amp; Database</p>
+                <p class="mt-1 text-foreground/80">Node.js, Express.js, Drizzle ORM, Python, SQL (PostgreSQL), NoSQL, SanityCMS, PayloadCMS</p>
+              </div>
+              <div class="rounded-2xl border border-border/70 bg-background p-4">
+                <p class="font-medium">DevOps &amp; Cloud</p>
+                <p class="mt-1 text-foreground/80">Docker, Linux, AWS, Google Cloud, Cloudflare, Vercel, CI/CD (GitHub Actions, Jenkins)</p>
+              </div>
+              <div class="rounded-2xl border border-border/70 bg-background p-4">
+                <p class="font-medium">Infrastructure</p>
+                <p class="mt-1 text-foreground/80">Traefik, DNS/Domain Management, SSL/TLS, Prometheus, Grafana</p>
+              </div>
+              <div class="rounded-2xl border border-border/70 bg-background p-4">
+                <p class="font-medium">AI &amp; APIs</p>
+                <p class="mt-1 text-foreground/80">OpenAI API, Vercel AI SDK, Prompt Engineering, Telegram Bot API, Data Cleaning, Scikit-learn</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Soft Skills</h2>
+            <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
+              <li><span class="font-medium text-foreground">Problem Solving:</span> Adapted quickly to changing project requirements at Zing Studio to meet strict event deadlines.</li>
+              <li><span class="font-medium text-foreground">Communication:</span> Coordinated effectively with designers and backend engineers during high-profile installations.</li>
+              <li><span class="font-medium text-foreground">Organization:</span> Managed multiple development sprints for personal and professional projects with high accuracy.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Languages</h2>
+            <ul class="mt-3 space-y-1.5 text-sm text-foreground/80">
+              <li><span class="font-medium text-foreground">English:</span> Fluent</li>
+              <li><span class="font-medium text-foreground">Mandarin:</span> Proficient</li>
+            </ul>
+          </section>
+
+          <a href="/" class="inline-flex rounded-full border border-border bg-background px-4 py-2 text-xs uppercase tracking-widest text-foreground/80 transition-colors hover:bg-muted">
+            ← Back to site
+          </a>
+        </aside>
+      </section>
+    </div>
+  </main>
+</Layout>
