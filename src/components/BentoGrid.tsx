@@ -314,8 +314,6 @@ function PhotoCard({ item }: { item: BentoCard }) {
     return <div className="relative min-h-56 overflow-hidden md:h-full">{content}</div>;
   }
 
-  console.log("ITEM.href:", item.href);
-
   return (
     <a
       href={item.href}

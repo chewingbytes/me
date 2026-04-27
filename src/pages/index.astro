@@ -10,8 +10,47 @@ const mdFiles = import.meta.glob<{ frontmatter: ScreenFrontmatter }>(
   { eager: true },
 );
 
+const photoAssetModules = import.meta.glob(
+  "/src/assets/photos/**/*.{jpg,jpeg,png,webp,avif}",
+  { eager: true },
+);
+
+const photoAssetUrlBySourcePath = new Map<string, string>();
+for (const [sourcePath, module] of Object.entries(photoAssetModules)) {
+  const resolvedAsset = (module as { default?: { src?: string } | string }).default;
+  const resolvedUrl =
+    typeof resolvedAsset === "string" ? resolvedAsset : resolvedAsset?.src;
+
+  if (resolvedUrl) {
+    photoAssetUrlBySourcePath.set(sourcePath, resolvedUrl);
+  }
+}
+
 const screens = Object.values(mdFiles)
   .map((f) => frontmatterToScreen(f.frontmatter))
+  .map((screen) => {
+    const nextItems = screen.bentoGrid?.items?.map((item) => {
+      if (!item.image?.startsWith("/src/assets/photos/")) return item;
+
+      const resolvedImage = photoAssetUrlBySourcePath.get(item.image);
+      if (!resolvedImage) return item;
+
+      return {
+        ...item,
+        image: resolvedImage,
+      };
+    });
+
+    if (!nextItems) return screen;
+
+    return {
+      ...screen,
+      bentoGrid: {
+        ...screen.bentoGrid,
+        items: nextItems,
+      },
+    };
+  })
   .sort((a, b) => order.indexOf(a._key) - order.indexOf(b._key));
 ---
 
