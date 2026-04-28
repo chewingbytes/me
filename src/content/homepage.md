@@ -11,7 +11,9 @@ cards:
     size: xl
     title: "hey, i'm bryan 👋"
     eyebrow: "About me"
-    body: "I'm a software developer and entrepreneur. I like spending my time working on passion projects that give back to the community. I'm currently working on a solution to improve students' mental wellbeing by fostering social connection in a safer and engaging manner."
+    body: "I'm a software developer and entrepreneur. I like spending my time working on passion projects that give back to the community. I'm currently working on a solution to improve students' mental wellbeing by fostering social connection in a safe and engaging environment."
+    link: "https://www.hangoutstudios.com/"
+    ctabuttonforlink: "hangoutstudios.com"
 
   - key: location
     variant: location

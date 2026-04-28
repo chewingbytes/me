@@ -98,7 +98,10 @@ function HeroCard({ item }: { item: BentoCard }) {
         </h2>
         {item.body && (
           <p className="mt-3 text-sm text-background/70 leading-relaxed">
-            {item.body}
+            {item.body} Find out more here:{" "}
+            <a className="underline underline-offset-4" target="_blank" href={item.link}>
+              {item.ctabuttonforlink}
+            </a>
           </p>
         )}
       </div>
@@ -128,7 +131,7 @@ function StatCard({ item }: { item: BentoCard }) {
 
 function PhotoGearCard({ item }: { item: BentoCard }) {
   return (
-    <div className="flex justify-center items-center p-4 md:h-full md:p-5">
+    <div className="flex justify-center items-center p-4 md:h-full md:p-5 bg-[#F2F2F2]">
       <p className="text-lg text-center font-thin text-foreground md:text-xl lg:text-2xl">
         {item.stat}
       </p>
@@ -237,9 +240,7 @@ function ProjectCard({ item }: { item: BentoCard }) {
           {item.title}
         </h3>
         {item.body && (
-          <p className="mt-1.5 text-sm text-muted-foreground">
-            {item.body}
-          </p>
+          <p className="mt-1.5 text-sm text-muted-foreground">{item.body}</p>
         )}
         {item.tags && (
           <div className="mt-4 flex flex-wrap gap-1.5 md:mt-6">
@@ -272,7 +273,11 @@ function ProjectCard({ item }: { item: BentoCard }) {
   );
 
   if (!href) {
-    return <div className="group flex h-auto flex-col overflow-hidden md:h-full">{content}</div>;
+    return (
+      <div className="group flex h-auto flex-col overflow-hidden md:h-full">
+        {content}
+      </div>
+    );
   }
 
   return (
@@ -311,7 +316,11 @@ function PhotoCard({ item }: { item: BentoCard }) {
   );
 
   if (!item.href) {
-    return <div className="relative min-h-56 overflow-hidden md:h-full">{content}</div>;
+    return (
+      <div className="relative min-h-56 overflow-hidden md:h-full">
+        {content}
+      </div>
+    );
   }
 
   return (

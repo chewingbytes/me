@@ -35,6 +35,8 @@ export type BentoCard = {
   title: string;
   eyebrow?: string;
   body?: string;
+  link?: string;
+  ctabuttonforlink?: string;
   // media
   image?: string;
   // social
@@ -102,10 +104,12 @@ export function frontmatterToScreen(fm: ScreenFrontmatter): CarouselScreenData {
     bentoGrid: {
       layoutPreset: fm.layoutPreset,
       density: fm.density,
-      items: fm.cards.map(({ key, ...rest }): BentoCard => ({
-        _key: key,
-        ...rest,
-      })),
+      items: fm.cards.map(
+        ({ key, ...rest }): BentoCard => ({
+          _key: key,
+          ...rest,
+        }),
+      ),
     },
   };
 }
