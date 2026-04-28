@@ -98,7 +98,7 @@ function HeroCard({ item }: { item: BentoCard }) {
         </h2>
         {item.body && (
           <p className="mt-3 text-sm text-background/70 leading-relaxed">
-            {item.body} Find out more here:{" "}
+            {item.body} 
             <a className="underline underline-offset-4" target="_blank" href={item.link}>
               {item.ctabuttonforlink}
             </a>

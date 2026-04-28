@@ -11,7 +11,7 @@ cards:
     size: xl
     title: "hey, i'm bryan 👋"
     eyebrow: "About me"
-    body: "I'm a software developer and entrepreneur. I like spending my time working on passion projects that give back to the community. I'm currently working on a solution to improve students' mental wellbeing by fostering social connection in a safe and engaging environment."
+    body: "I'm a software developer and entrepreneur. I like spending my time working on passion projects that give back to the community. I'm currently working on a solution to improve students' mental wellbeing by fostering social connection in a safe and engaging environment. Find out more here: "
     link: "https://www.hangoutstudios.com/"
     ctabuttonforlink: "hangoutstudios.com"
 
@@ -71,7 +71,7 @@ cards:
     size: md
     title: "Let's work together"
     eyebrow: "Open to work"
-    body: "I'm available for freelance projects, internships, full-time roles, and interesting collaborations. Drop me a message."
-    ctaLabel: "Get in touch →"
-    ctaHref: "mailto:hello@bryan.dev"
+    body: "I'm available for freelance projects, internships, full-time roles, and interesting collaborations."
+    ctaLabel: "Shoot me an email →"
+    ctaHref: "mailto:bryanchewzy24@gmail.com"
 ---
