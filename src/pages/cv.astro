@@ -116,38 +116,20 @@ import Layout from "@/layouts/Layout.astro";
 
         <aside class="space-y-8">
           <section>
-            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Technical Skills</h2>
-            <div class="mt-3 space-y-3 text-sm">
-              <div class="rounded-2xl border border-border/70 bg-background p-4">
-                <p class="font-medium">Frontend</p>
-                <p class="mt-1 text-foreground/80">React.js, Next.js, SvelteKit, Astro, React Native (Expo), Tailwind CSS, TypeScript, Figma, Electron.js</p>
-              </div>
-              <div class="rounded-2xl border border-border/70 bg-background p-4">
-                <p class="font-medium">Backend &amp; Database</p>
-                <p class="mt-1 text-foreground/80">Node.js, Express.js, Drizzle ORM, Python, SQL (PostgreSQL), NoSQL, SanityCMS, PayloadCMS</p>
-              </div>
-              <div class="rounded-2xl border border-border/70 bg-background p-4">
-                <p class="font-medium">DevOps &amp; Cloud</p>
-                <p class="mt-1 text-foreground/80">Docker, Linux, AWS, Google Cloud, Cloudflare, Vercel, CI/CD (GitHub Actions, Jenkins)</p>
-              </div>
-              <div class="rounded-2xl border border-border/70 bg-background p-4">
-                <p class="font-medium">Infrastructure</p>
-                <p class="mt-1 text-foreground/80">Traefik, DNS/Domain Management, SSL/TLS, Prometheus, Grafana</p>
-              </div>
-              <div class="rounded-2xl border border-border/70 bg-background p-4">
-                <p class="font-medium">AI &amp; APIs</p>
-                <p class="mt-1 text-foreground/80">OpenAI API, Vercel AI SDK, Prompt Engineering, Telegram Bot API, Data Cleaning, Scikit-learn</p>
-              </div>
+            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Top Skills</h2>
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              {[
+                "Quantitative Research",
+                "Technical Analysis",
+                "Data Visualization",
+                "Multimedia",
+                "Visual Communication"
+              ].map((skill) => (
+                <span class="rounded-full border border-border/70 bg-background px-4 py-2 font-medium text-foreground/80">
+                  {skill}
+                </span>
+              ))}
             </div>
-          </section>
-
-          <section>
-            <h2 class="text-xs uppercase tracking-[0.2em] text-foreground/80">Soft Skills</h2>
-            <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm text-foreground/80">
-              <li><span class="font-medium text-foreground">Problem Solving:</span> Adapted quickly to changing project requirements at Zing Studio to meet strict event deadlines.</li>
-              <li><span class="font-medium text-foreground">Communication:</span> Coordinated effectively with designers and backend engineers during high-profile installations.</li>
-              <li><span class="font-medium text-foreground">Organization:</span> Managed multiple development sprints for personal and professional projects with high accuracy.</li>
-            </ul>
           </section>
 
           <section>
