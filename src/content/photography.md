@@ -54,21 +54,21 @@ cards:
     body: "School Trip to Bangkok, Thailand."
     href: "/photography/thailand"
 
-  - key: photo-cbd
-    variant: photo
-    size: md
-    title: "Chaos in the CBD"
-    eyebrow: "Collection"
-    image: "/src/assets/photos/cbd/cover.jpg"
-    body: ""
-    href: "/photography/cbd"
+  # - key: photo-cbd
+  #   variant: photo
+  #   size: md
+  #   title: "Chaos in the CBD"
+  #   eyebrow: "Collection"
+  #   image: "/src/assets/photos/cbd/cover.jpg"
+  #   body: ""
+  #   href: "/photography/cbd"
 
-  - key: photo-jc
-    variant: photo
-    size: md
-    title: "Putting the Chi in Joo Chiat"
-    eyebrow: "Collection"
-    image: "/src/assets/photos/joochiat/cover.jpg"
-    body: ""
-    href: "/photography/joochiat"
+  # - key: photo-jc
+  #   variant: photo
+  #   size: md
+  #   title: "Putting the Chi in Joo Chiat"
+  #   eyebrow: "Collection"
+  #   image: "/src/assets/photos/joochiat/cover.jpg"
+  #   body: ""
+  #   href: "/photography/joochiat"
 ---
