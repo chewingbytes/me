@@ -20,7 +20,7 @@ cards:
 
   - key: photo-china
     variant: photo
-    size: lg
+    size: md
     title: "China"
     eyebrow: "Collection"
     image: "/src/assets/photos/china/_MG_4069-Enhanced-NR.jpg"
@@ -38,7 +38,7 @@ cards:
 
   - key: photo-mundai
     variant: photo
-    size: lg
+    size: sm
     title: "Singapore Mundai Zoo"
     eyebrow: "Collection"
     image: "/src/assets/photos/mundai/monkei3.jpg"
@@ -47,7 +47,7 @@ cards:
 
   - key: photo-thailand
     variant: photo
-    size: md
+    size: sm
     title: "Thailand"
     eyebrow: "Collection"
     image: "/src/assets/photos/thailand/_MG_2751.jpg"
