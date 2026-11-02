@@ -18,7 +18,8 @@ cards:
     size: xl
     title: "Application Developer Lead"
     eyebrow: "Feb 2026"
-    body: "Engineered an automated QR-attendance system and mobile app for Kumon Centers. Replaced manual tracking with an interactive dashboard and integrated the Meta WhatsApp Business API to automate parent notifications."
+    body: "Digitised tuition-centre workflows by developing parent-and student-facing applications, including an attendance management system and automated enquiry notifications via the WhatsApp Business API.
+"
     image: "/kumon.jpg"
     tags:
       [
